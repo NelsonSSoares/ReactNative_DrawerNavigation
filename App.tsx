@@ -11,7 +11,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="WelcomeScreen" >
-        <Drawer.Screen name="WelcomeScreen" component={WelcomeScreen} />
+        <Drawer.Screen name="WelcomeScreen" component={WelcomeScreen}  options={{
+          headerStyle:{backgroundColor: "#610020ff"},
+          headerTintColor: "white",
+          drawerLabel: "Welcome"
+        }}/>
         <Drawer.Screen name="UserScreen" component={UserScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
@@ -20,6 +24,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-   
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
